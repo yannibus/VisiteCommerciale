@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_1</activeVersionIdentifier>
+    <description>Prompt utiliser pour préparer une Visite commerciale et mettre à jour le champ Plan_Visite</description>
+    <developerName>Plan_Visite</developerName>
+    <masterLabel>Plan_Visite</masterLabel>
+    <relatedEntity>Visite_Commerciale__c</relatedEntity>
+    <relatedField>Visite_Commerciale__c.Plan_Visite__c</relatedField>
+    <templateVersions>
+        <content>Tu es un commercial expert, rompu à la méthodologie de vente en mobilité.
+Ton objectif est de préparer un Plan de Visite a impact pour un commercial terrain.
+Formate bien ta production et clairement afin qu&apos;elle soit lisible sur un appareil mobile.
+Utilises des section paragraphe clairement mis en avant dans le format
+Il faut à minima un résumé succinct de cette visite, de l&apos;entreprise rencontrée et si présent des informations du contact rencontré.
+Une section &quot;Buts de guerre&quot; avec les objectifs très clair
+Des conseil méthodologique basés sur ton experience dans ce contexte de vente sur le savoir faire et savoir être.
+
+Voici les into sur la visite : {!$RecordSnapshot:Visite_Commerciale__c.Snapshot}
+Voici les info sur l&apos;entreprise rencontrée : {!$RecordSnapshot:Visite_Commerciale__c.Account__r.Snapshot}
+Voici les info sur le contact rencontré (peut être vide) : {!$RecordSnapshot:Visite_Commerciale__c.Contact__r.Snapshot}
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://Visite_Commerciale__c</definition>
+            <referenceName>Input:Visite_Commerciale__c</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultVertexAIGemini20Flash001</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getDataForGrounding</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>recordId</parameterName>
+                <valueExpression>{!$Input:Visite_Commerciale__c.Id}</valueExpression>
+            </parameters>
+            <referenceName>RecordSnapshot:Visite_Commerciale__c</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getDataForGrounding</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>recordId</parameterName>
+                <valueExpression>{!$Input:Visite_Commerciale__c.Account__r.Id}</valueExpression>
+            </parameters>
+            <referenceName>RecordSnapshot:Visite_Commerciale__c.Account__r</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getDataForGrounding</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>recordId</parameterName>
+                <valueExpression>{!$Input:Visite_Commerciale__c.Contact__r.Id}</valueExpression>
+            </parameters>
+            <referenceName>RecordSnapshot:Visite_Commerciale__c.Contact__r</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__fieldCompletion</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

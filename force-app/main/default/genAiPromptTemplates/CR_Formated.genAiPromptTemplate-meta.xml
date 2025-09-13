@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_1</activeVersionIdentifier>
+    <description>Ce Prompt est utilise dans l&apos;objet Visite Commerciale pour formater un CR détailler d&apos;une visite effectuer par un commercial sur la base d&apos;une transcription vocale</description>
+    <developerName>CR_Formated</developerName>
+    <masterLabel>CR_Formated</masterLabel>
+    <relatedEntity>Visite_Commerciale__c</relatedEntity>
+    <relatedField>Visite_Commerciale__c.CR_Formated__c</relatedField>
+    <templateVersions>
+        <content>Tu es un commercial expert. Tu analyses un compte rendu dicté à la voix par un commercial.
+C&apos;est une trasncription, il peut donc y avoir des erreurs et surtout des hésitations ou tics de language.
+Tu dois produire un compte rendu de cette visite en mobilité avec un format très clair lisible et activable. Composée notamment de sections, paragraphes clairs.
+
+Il faut notamment en sortie : 
+- Un résumé général - a destination de l&apos;équipe commerciale
+- Les actions avec les porteurs et les dates de fin si besoin
+- Des insights méthodologique issue de ton expertise métiers, mettant en évidence si il y en a des manques ou les zones à éclaircir dans le futur.
+
+Voici la transcription : {!$Input:Visite_Commerciale__c.CR_Transcrit__c}
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://Visite_Commerciale__c</definition>
+            <referenceName>Input:Visite_Commerciale__c</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultVertexAIGemini20Flash001</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__fieldCompletion</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
