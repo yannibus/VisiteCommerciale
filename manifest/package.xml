@@ -1,20 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>Visite_Commerciale__c</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Visite_Commerciale__c.ID_v_nement_Associ__c</members>
         <members>Visite_Commerciale__c.Account__c</members>
         <members>Visite_Commerciale__c.Contact__c</members>
+        <members>Visite_Commerciale__c.CR_Formated__c</members>
+        <members>Visite_Commerciale__c.CR_Transcrit__c</members>
         <members>Visite_Commerciale__c.Date_et_Heure_de_la_Visite__c</members>
         <members>Visite_Commerciale__c.Dur_e_en_minutes__c</members>
-        <members>Visite_Commerciale__c.Statut__c</members>
+        <members>Visite_Commerciale__c.D_tails_Client_le__c</members>
+        <members>Visite_Commerciale__c.D_tails_Commercial__c</members>
+        <members>Visite_Commerciale__c.ID_v_nement_Associ__c</members>
         <members>Visite_Commerciale__c.Lien_v_nement__c</members>
         <members>Visite_Commerciale__c.Plan_Visite__c</members>
-        <members>Visite_Commerciale__c.CR_Transcrit__c</members>
-        <members>Visite_Commerciale__c.CR_Formated__c</members>
+        <members>Visite_Commerciale__c.Statut__c</members>
+        <members>Visite_Commerciale__c.Type_Visite__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -27,17 +30,19 @@
         <name>Flow</name>
     </types>
     <types>
-        <members>Plan_Visite</members>
-        <members>CR_Formated</members>
-        <name>GenAiPromptTemplate</name>
-    </types>
-    <types>
         <members>Account.Cr_er_Visite</members>
+        <members>Visite_Commerciale__c.Mise_jour_mobile</members>
+        <members>Visite_Commerciale__c.Update_D_mo</members>
         <name>QuickAction</name>
     </types>
     <types>
         <members>Visite_Commerciale__c.Compact_Layout</members>
         <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>Plan_Visite</members>
+        <members>CR_Formated</members>
+        <name>GenAiPromptTemplate</name>
     </types>
     <types>
         <members>Visite_Commerciale_Record_Page</members>

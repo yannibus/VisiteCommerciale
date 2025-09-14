@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Visite__c</fullName>
+    <description>Quel outil de visite ? Mobilité ? Réunion ? Morcelée avec plusieurs participants ?</description>
+    <inlineHelpText>Détailler comment la &quot;visite&quot; se déroule ? 1:1 sur site, en réunion, au téléphone...</inlineHelpText>
+    <label>Type Visite</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

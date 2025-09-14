@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>D_tails_Client_le__c</fullName>
+    <description>Qui est le client ? Quel est le besoin ?</description>
+    <inlineHelpText>Détailler le contexte clientèle pour le prompt. Quelle industrie ? Quel type de besoin... ? Points saillants à mettre en avant dans le plan de visite (250 car max)</inlineHelpText>
+    <label>Détails Clientèle</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

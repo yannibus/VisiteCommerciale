@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <activeVersionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_1</activeVersionIdentifier>
+    <activeVersionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_5</activeVersionIdentifier>
     <description>Ce Prompt est utilise dans l&apos;objet Visite Commerciale pour formater un CR détailler d&apos;une visite effectuer par un commercial sur la base d&apos;une transcription vocale</description>
     <developerName>CR_Formated</developerName>
     <masterLabel>CR_Formated</masterLabel>
@@ -10,6 +10,7 @@
         <content>Tu es un commercial expert. Tu analyses un compte rendu dicté à la voix par un commercial.
 C&apos;est une trasncription, il peut donc y avoir des erreurs et surtout des hésitations ou tics de language.
 Tu dois produire un compte rendu de cette visite en mobilité avec un format très clair lisible et activable. Composée notamment de sections, paragraphes clairs.
+La transcription fait suite à la préparation de la visite avec des objectifs... pour identifier les résultat tu peux te baser sur cette préparation de visite : {!$Input:Visite_Commerciale__c.Plan_Visite__c}
 
 Il faut notamment en sortie : 
 - Un résumé général - a destination de l&apos;équipe commerciale
@@ -26,7 +27,7 @@ Voici la transcription : {!$Input:Visite_Commerciale__c.CR_Transcrit__c}
         </inputs>
         <primaryModel>sfdc_ai__DefaultVertexAIGemini20Flash001</primaryModel>
         <status>Published</status>
-        <versionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_1</versionIdentifier>
+        <versionIdentifier>Nbmc8FWOiTBvbnapK4J6dlo9yvj7XQkaH8/wdXW32U0=_5</versionIdentifier>
     </templateVersions>
     <type>einstein_gpt__fieldCompletion</type>
     <visibility>Global</visibility>

@@ -5,6 +5,11 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>actionNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>Visite_Commerciale__c.Update_D_mo</value>
+                        </valueListItems>
+                    </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>collapsed</name>
@@ -465,6 +470,9 @@
         <properties>
             <name>actionNames</name>
             <valueList>
+                <valueListItems>
+                    <value>Visite_Commerciale__c.Mise_jour_mobile</value>
+                </valueListItems>
                 <valueListItems>
                     <value>Edit</value>
                 </valueListItems>
