@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Saisie Rapide & Fichiers" icon-name="standard:logging">
+        <div class="slds-p-around_medium">
+            
+            <div class="slds-m-bottom_medium slds-box slds-box_x-small slds-theme_shade">
+                <h3 class="slds-text-heading_small slds-m-bottom_x-small">📎 Pièces Jointes</h3>
+                <lightning-file-upload
+                    label="Ajouter un fichier"
+                    name="fileUploader"
+                    accept=".pdf, .png, .jpg, .jpeg, .docx, .xlsx"
+                    record-id={recordId}
+                    onuploadfinished={handleUploadFinished}
+                    multiple>
+                </lightning-file-upload>
+            </div>
+
+            <div class="slds-box slds-box_x-small slds-theme_default">
+                <h3 class="slds-text-heading_small slds-m-bottom_x-small">📝 Transcription</h3>
+                
+                <lightning-record-edit-form
+                    object-api-name="Visite_Commerciale__c"
+                    record-id={recordId}
+                    onsuccess={handleSuccess}>
+                    
+                    <lightning-messages></lightning-messages>
+
+                    <div class="slds-m-bottom_small">
+                        <lightning-input-field field-name="CR_Transcrit__c"></lightning-input-field>
+                    </div>
+
+                    <div class="slds-align_absolute-center slds-m-top_small">
+                        <lightning-button
+                            variant="brand"
+                            type="submit"
+                            label="Enregistrer la transcription">
+                        </lightning-button>
+                    </div>
+                </lightning-record-edit-form>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

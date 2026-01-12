@@ -52,5 +52,9 @@
         <members>Utilisateur_de_Visites_Commerciales</members>
         <name>PermissionSet</name>
     </types>
-    <version>64.0</version>
+    <types>
+        <members>simpleFileUploader</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>65.0</version>
 </Package>
